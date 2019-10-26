@@ -1,0 +1,447 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.CameraActivity" >
+
+    <LinearLayout
+        android:id="@+id/locationFullView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:visibility="invisible" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.50"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.50"
+                    android:background="#F00000"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/labelAltitude"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="6dp"
+                            android:layout_marginEnd="2dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="6dp"
+                            android:text="@string/label_altitude"
+                            android:textColor="#FFFFFF"
+                            android:textSize="10sp"
+                            android:typeface="sans"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/valueAltitude"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="6dp"
+                            android:layout_marginEnd="12dp"
+                            android:layout_marginLeft="6dp"
+                            android:layout_marginRight="12dp"
+                            android:layout_marginStart="6dp"
+                            android:layout_marginTop="6dp"
+                            android:textColor="#FFFFFF"
+                            android:textSize="10sp"
+                            android:typeface="sans"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/labelLongitude"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="6dp"
+                            android:layout_marginEnd="2dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="6dp"
+                            android:text="@string/label_longitude"
+                            android:textColor="#FFFFFF"
+                            android:textSize="10sp"
+                            android:typeface="sans"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/valueLongitude"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="6dp"
+                            android:layout_marginEnd="12dp"
+                            android:layout_marginLeft="6dp"
+                            android:layout_marginRight="12dp"
+                            android:layout_marginStart="6dp"
+                            android:layout_marginTop="6dp"
+                            android:textColor="#FFFFFF"
+                            android:textSize="10sp"
+                            android:typeface="sans"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/labelLatitude"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="6dp"
+                            android:layout_marginEnd="2dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="6dp"
+                            android:text="@string/label_latitude"
+                            android:textColor="#FFFFFF"
+                            android:textSize="10sp"
+                            android:typeface="sans"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/valueLatitude"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="6dp"
+                            android:layout_marginEnd="12dp"
+                            android:layout_marginLeft="6dp"
+                            android:layout_marginRight="12dp"
+                            android:layout_marginStart="6dp"
+                            android:layout_marginTop="6dp"
+                            android:textColor="#FFFFFF"
+                            android:textSize="10sp"
+                            android:typeface="sans"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/labelCountry"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="6dp"
+                            android:layout_marginEnd="2dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="6dp"
+                            android:text="@string/label_country"
+                            android:textColor="#FFFFFF"
+                            android:textSize="10sp"
+                            android:typeface="sans"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/valueCountry"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="6dp"
+                            android:layout_marginEnd="12dp"
+                            android:layout_marginLeft="6dp"
+                            android:layout_marginRight="12dp"
+                            android:layout_marginStart="6dp"
+                            android:layout_marginTop="6dp"
+                            android:textColor="#FFFFFF"
+                            android:textSize="10sp"
+                            android:typeface="sans"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/labelProvince"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="6dp"
+                            android:layout_marginEnd="2dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="6dp"
+                            android:text="@string/label_province"
+                            android:textColor="#FFFFFF"
+                            android:textSize="10sp"
+                            android:typeface="sans"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/valueProvince"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="6dp"
+                            android:layout_marginEnd="12dp"
+                            android:layout_marginLeft="6dp"
+                            android:layout_marginRight="12dp"
+                            android:layout_marginStart="6dp"
+                            android:layout_marginTop="6dp"
+                            android:textColor="#FFFFFF"
+                            android:textSize="10sp"
+                            android:typeface="sans"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/labelCity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="6dp"
+                            android:layout_marginEnd="2dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="6dp"
+                            android:text="@string/label_city"
+                            android:textColor="#FFFFFF"
+                            android:textSize="10sp"
+                            android:typeface="sans"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/valueCity"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="6dp"
+                            android:layout_marginEnd="12dp"
+                            android:layout_marginLeft="6dp"
+                            android:layout_marginRight="12dp"
+                            android:layout_marginStart="6dp"
+                            android:layout_marginTop="6dp"
+                            android:textColor="#FFFFFF"
+                            android:textSize="10sp"
+                            android:typeface="sans"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/labelPlace"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="6dp"
+                            android:layout_marginEnd="2dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="6dp"
+                            android:text="@string/label_place"
+                            android:textColor="#FFFFFF"
+                            android:textSize="10sp"
+                            android:typeface="sans"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/valuePlace"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="6dp"
+                            android:layout_marginEnd="12dp"
+                            android:layout_marginLeft="6dp"
+                            android:layout_marginRight="12dp"
+                            android:layout_marginStart="6dp"
+                            android:layout_marginTop="6dp"
+                            android:textColor="#FFFFFF"
+                            android:textSize="10sp"
+                            android:typeface="sans"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/labelDateTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="6dp"
+                            android:layout_marginEnd="2dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="6dp"
+                            android:text="@string/label_datetime"
+                            android:textColor="#FFFFFF"
+                            android:textSize="10sp"
+                            android:typeface="sans"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/valueDateTime"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="6dp"
+                            android:layout_marginEnd="12dp"
+                            android:layout_marginLeft="6dp"
+                            android:layout_marginRight="12dp"
+                            android:layout_marginStart="6dp"
+                            android:layout_marginTop="6dp"
+                            android:textColor="#FFFFFF"
+                            android:textSize="10sp"
+                            android:typeface="sans"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/labelGPS"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="6dp"
+                            android:layout_marginEnd="2dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="6dp"
+                            android:text="@string/label_gps"
+                            android:textColor="#FFFFFF"
+                            android:textSize="10sp"
+                            android:typeface="sans"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/valueGPS"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="6dp"
+                            android:layout_marginEnd="12dp"
+                            android:layout_marginLeft="6dp"
+                            android:layout_marginRight="12dp"
+                            android:layout_marginStart="6dp"
+                            android:layout_marginTop="6dp"
+                            android:textColor="#FFFFFF"
+                            android:textSize="10sp"
+                            android:typeface="sans"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <com.amap.api.maps2d.MapView
+                    android:id="@+id/map"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.50" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.50"
+            android:orientation="horizontal" >
+        </LinearLayout>
+    </LinearLayout>
+
+    <SurfaceView
+        android:id="@+id/cameraSurfaceView"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:id="@+id/operationView"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_gravity="center"
+        android:background="#E0E0E0"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@+id/btnPreview"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="6dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/btn_review"
+            android:src="@drawable/ic_preview" />
+
+        <ImageButton
+            android:id="@+id/btnSwitchFlash" 
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="6dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/btn_switch_flash"
+            android:src="@drawable/ic_flash_auto_selected" />
+
+        <ImageButton
+            android:id="@+id/btnTakePhoto"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="6dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/btn_take_photo"
+            android:src="@drawable/ic_take_photo" />
+
+        <ImageButton
+            android:id="@+id/btnSwitchCamera"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="6dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/btn_switch_camera"
+            android:src="@drawable/ic_switch_camera_back" />
+
+        <ImageButton
+            android:id="@+id/btnSwitchLocation"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="6dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/btn_switch_location"
+            android:src="@drawable/ic_location" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<string name="app_name">海拔相机</string>
+	<string name="btn_take_photo">拍照</string>
+	<string name="btn_switch_flash">闪光</string>
+	<string name="btn_switch_camera">切换</string>
+	<string name="btn_switch_location">地图</string>
+	<string name="label_altitude">海拔:</string>
+	<string name="label_longitude">经度:</string>
+	<string name="label_latitude">纬度:</string>
+	<string name="label_country">国家:</string>
+	<string name="label_province">省份:</string>
+	<string name="label_city">城市:</string>
+	<string name="label_place">地点:</string>
+	<string name="label_datetime">时间:</string>
+	<string name="label_gps">GPS:</string>
+	<string name="label_preview_view">预览</string>
+	<string name="btn_back">返回</string>
+	<string name="btn_delete">刪除</string>
+	<string name="btn_share">分享</string>
+	<string name="message_not_found_camera_device">无法找到相机设备。</string>
+	<string name="file_delete_success">删除照片成功。</string>
+	<string name="message_open_location_service">无法定位，请打开定位服务。</string>
+	<string name="btn_review">浏览</string>
+	<string name="no_picture_to_review">没有照片可以浏览。</string>
+	<string name="psrmission_settings_ok">确定</string>
+	<string name="psrmission_settings_title">权限申请</string>
+	<string name="psrmission_settings_cancel">取消</string>
+	<string name="psrmission_settings_set">设置</string>
+	<string name="psrmission_settings_message">请在打开的权限窗口中开启{0}权限，以正常使用本应用</string>
+	<string name="permission_key_camera">相机</string>
+	<string name="permission_key_location">定位</string>
+	<string name="message_failed_save_picture">保存照片失败。</string>
+	<string name="permission_key_wifi">WIFI</string>
+	<string name="permission_key_network">Network</string>
+	<string name="permission_key_internet">Internet</string>
+	<string name="permission_key_store">存储空间</string>
+	<string name="permission_key_camera_message">需要您允许我们使用相机，以便AltitudeCamera正常运行</string>
+	<string name="permission_key_location_message">需要您允许我们使用定位，以便AltitudeCamera正常运行</string>
+	<string name="permission_key_wifi_message01">需要您允许我们访问WIFI，以便AltitudeCamera正常运行</string>
+	<string name="permission_key_wifi_message02">需要您允许我们修改WIFI，以便AltitudeCamera正常运行</string>
+	<string name="permission_key_internet_message">需要您允许我们使用Internet，以便AltitudeCamera正常运行</string>
+	<string name="permission_key_store_message">需要您允许我们读写你的存储卡，以便AltitudeCamera正常运行</string>
+	<string name="permission_key_network_message">需要您允许我们访问Network，以便AltitudeCamera正常运行</string>
+	
+</resources>
